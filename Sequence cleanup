@@ -1,0 +1,24 @@
+class DNAstring (str):
+    
+    def length (self):
+        return (length(self))
+    
+    def purify(self):
+        s = ""
+        num = self.count("N")
+        for i in range (num):
+            s += "N"
+        
+        l = "{" + str(num) + "}"
+        l = self.replace(s, l)
+        
+        return l
+       
+def main():
+    ''' Get user DNA data and clean it up.'''
+    data = input('DNA data?')
+    thisDNA = DNAstring (data.upper())
+    pureData = thisDNA.purify()
+    print (pureData)
+    
+main()
